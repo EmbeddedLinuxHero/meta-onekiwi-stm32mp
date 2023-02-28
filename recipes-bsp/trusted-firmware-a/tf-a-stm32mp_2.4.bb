@@ -51,7 +51,8 @@ include ${@oe.utils.ifelse(d.getVar('ST_ARCHIVER_ENABLE') == '1', 'tf-a-stm32mp-
 BBCLASSEXTEND = "devupstream:target"
 
 SRC_URI_class-devupstream = "git://github.com/EmbeddedLinuxHero/atf-stm32mp.git;protocol=https;branch=${ARCHIVER_ST_BRANCH}"
-SRCREV_class-devupstream = "a47302b7b05a9c1e27f62b08fe8f66ca422ef174"
+#SRCREV_class-devupstream = "a47302b7b05a9c1e27f62b08fe8f66ca422ef174"
+SRCREV_class-devupstream = "1873f68e7432214013ae686a99ec3da5db644233"
 
 # ---------------------------------
 # Configure default preference to manage dynamic selection between tarball and github
