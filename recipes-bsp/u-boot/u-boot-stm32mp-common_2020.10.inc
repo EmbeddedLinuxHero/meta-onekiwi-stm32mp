@@ -56,7 +56,7 @@ BBCLASSEXTEND = "devupstream:target"
 
 SRC_URI_class-devupstream = "git://github.com/EmbeddedLinuxHero/uboot-stm32mp.git;protocol=https;branch=${ARCHIVER_ST_BRANCH}"
 #SRCREV_class-devupstream = "b1233459c34eb14c5070f605655e72e74be5ea5c"
-SRCREV_class-devupstream = "63685b1afece9fcccd26f113d35c4f2a9b0b641c"
+SRCREV_class-devupstream = "e9182668dcd3ec3ff4bd84a529cae98db6819b28"
 
 # ---------------------------------
 # Configure default preference to manage dynamic selection between tarball and github
