@@ -52,7 +52,7 @@ BBCLASSEXTEND = "devupstream:target"
 
 SRC_URI_class-devupstream = "git://github.com/EmbeddedLinuxHero/atf-stm32mp.git;protocol=https;branch=${ARCHIVER_ST_BRANCH}"
 #SRCREV_class-devupstream = "a47302b7b05a9c1e27f62b08fe8f66ca422ef174"
-SRCREV_class-devupstream = "1873f68e7432214013ae686a99ec3da5db644233"
+SRCREV_class-devupstream = "9b9c8265055525d998e950444cb99471618371f8"
 
 # ---------------------------------
 # Configure default preference to manage dynamic selection between tarball and github
