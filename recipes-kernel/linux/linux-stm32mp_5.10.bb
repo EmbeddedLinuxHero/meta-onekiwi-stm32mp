@@ -57,7 +57,7 @@ S = "${WORKDIR}/linux-${LINUX_VERSION}.${LINUX_SUBVERSION}"
 # ---------------------------------
 BBCLASSEXTEND = "devupstream:target"
 
-SRC_URI_class-devupstream = "git://github.com/STMicroelectronics/linux.git;protocol=https;branch=${ARCHIVER_ST_BRANCH}"
+SRC_URI_class-devupstream = "git://github.com/EmbeddedLinuxHero/linux-stm32mp.git;protocol=https;branch=${ARCHIVER_ST_BRANCH}"
 SRCREV_class-devupstream = "8e756f0b4a005e9a0374ab2ffb20df8c3ed4ed63"
 
 # ---------------------------------
@@ -65,7 +65,8 @@ SRCREV_class-devupstream = "8e756f0b4a005e9a0374ab2ffb20df8c3ed4ed63"
 # ---------------------------------
 STM32MP_SOURCE_SELECTION ?= "tarball"
 
-DEFAULT_PREFERENCE = "${@bb.utils.contains('STM32MP_SOURCE_SELECTION', 'github', '-1', '1', d)}"
+#DEFAULT_PREFERENCE = "${@bb.utils.contains('STM32MP_SOURCE_SELECTION', 'github', '-1', '1', d)}"
+DEFAULT_PREFERENCE = "${@bb.utils.contains('STM32MP_SOURCE_SELECTION', 'tarball', '-1', '1', d)}"
 
 # ---------------------------------
 # Configure archiver use

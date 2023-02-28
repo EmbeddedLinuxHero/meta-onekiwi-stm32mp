@@ -54,7 +54,7 @@ S = "${WORKDIR}/git"
 # ---------------------------------
 BBCLASSEXTEND = "devupstream:target"
 
-SRC_URI_class-devupstream = "git://github.com/STMicroelectronics/u-boot.git;protocol=https;branch=${ARCHIVER_ST_BRANCH}"
+SRC_URI_class-devupstream = "git://github.com/EmbeddedLinuxHero/uboot-stm32mp.git;protocol=https;branch=${ARCHIVER_ST_BRANCH}"
 SRCREV_class-devupstream = "b1233459c34eb14c5070f605655e72e74be5ea5c"
 
 # ---------------------------------
@@ -62,4 +62,5 @@ SRCREV_class-devupstream = "b1233459c34eb14c5070f605655e72e74be5ea5c"
 # ---------------------------------
 STM32MP_SOURCE_SELECTION ?= "tarball"
 
-DEFAULT_PREFERENCE = "${@bb.utils.contains('STM32MP_SOURCE_SELECTION', 'github', '-1', '1', d)}"
+#DEFAULT_PREFERENCE = "${@bb.utils.contains('STM32MP_SOURCE_SELECTION', 'github', '-1', '1', d)}"
+DEFAULT_PREFERENCE = "${@bb.utils.contains('STM32MP_SOURCE_SELECTION', 'tarball', '-1', '1', d)}"

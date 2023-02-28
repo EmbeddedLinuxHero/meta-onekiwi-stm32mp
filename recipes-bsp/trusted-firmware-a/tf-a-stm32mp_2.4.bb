@@ -50,7 +50,7 @@ include ${@oe.utils.ifelse(d.getVar('ST_ARCHIVER_ENABLE') == '1', 'tf-a-stm32mp-
 # ---------------------------------
 BBCLASSEXTEND = "devupstream:target"
 
-SRC_URI_class-devupstream = "git://github.com/STMicroelectronics/arm-trusted-firmware.git;protocol=https;branch=${ARCHIVER_ST_BRANCH}"
+SRC_URI_class-devupstream = "git://github.com/EmbeddedLinuxHero/atf-stm32mp.git;protocol=https;branch=${ARCHIVER_ST_BRANCH}"
 SRCREV_class-devupstream = "a47302b7b05a9c1e27f62b08fe8f66ca422ef174"
 
 # ---------------------------------
@@ -58,4 +58,5 @@ SRCREV_class-devupstream = "a47302b7b05a9c1e27f62b08fe8f66ca422ef174"
 # ---------------------------------
 STM32MP_SOURCE_SELECTION ?= "tarball"
 
-DEFAULT_PREFERENCE = "${@bb.utils.contains('STM32MP_SOURCE_SELECTION', 'github', '-1', '1', d)}"
+#DEFAULT_PREFERENCE = "${@bb.utils.contains('STM32MP_SOURCE_SELECTION', 'github', '-1', '1', d)}"
+DEFAULT_PREFERENCE = "${@bb.utils.contains('STM32MP_SOURCE_SELECTION', 'tarball', '-1', '1', d)}"
