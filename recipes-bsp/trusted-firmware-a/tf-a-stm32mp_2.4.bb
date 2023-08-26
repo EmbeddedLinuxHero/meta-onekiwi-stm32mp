@@ -50,7 +50,7 @@ include ${@oe.utils.ifelse(d.getVar('ST_ARCHIVER_ENABLE') == '1', 'tf-a-stm32mp-
 # ---------------------------------
 BBCLASSEXTEND = "devupstream:target"
 
-SRC_URI_class-devupstream = "git://github.com/OneKiwiPublic/atf-stm32mp.git;protocol=https;branch=${ARCHIVER_ST_BRANCH}"
+SRC_URI_class-devupstream = "git://github.com/OneKiwiPublic/atf-stm32mp-1.git;protocol=https;branch=${ARCHIVER_ST_BRANCH}"
 #SRCREV_class-devupstream = "a47302b7b05a9c1e27f62b08fe8f66ca422ef174"
 SRCREV_class-devupstream = "ee58b62d1665894834225d64868e4e5738d0deb3"
 
